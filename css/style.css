@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0b0f1a; 
+  color: #fff;
+  overflow-x: hidden;
+}
+
+a, h1, h2, span {
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #0ff;
+  animation: glow 2s infinite alternate;
+}
+
+.hero p {
+  margin-top: 1.5rem;
+  color: #aad4ff;
+  line-height: 1.6;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background: #0ff;
+  color: #0b0f1a;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.cta:hover {
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+  transform: translateY(-3px);
+}
+
+.blog-flow {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.blog-flow h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #0ff;
+  font-size: 2rem;
+}
+
+.phase {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.phase span {
+  display: inline-block;
+  width: 2rem;
+  text-align: center;
+  color: #0ff;
+  font-weight: bold;
+  margin-right: 1rem;
+  animation: pulse 2s infinite;
+}
+
+.phase a {
+  color: #aad4ff;
+  text-decoration: none;
+}
+
+.phase a:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #0ff;
+}
+
+.code-bg {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  color: #0ff;
+  display: flex;
+  gap: 1rem;
+  animation: float 5s infinite alternate;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #08101a;
+  border-top: 1px solid #0ff;
+  color: #aad4ff;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #0ff; }
+  50% { text-shadow: 0 0 15px #0ff, 0 0 30px #0ff; }
+  100% { text-shadow: 0 0 5px #0ff; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
