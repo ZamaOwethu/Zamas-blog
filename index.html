@@ -1,57 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Life Before HTML & Java</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Before HTML & Java</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
 
-  <section class="hero">
-    <h1 class="typing">Life before HTML & Java: My path to IT</h1>
-    <p>
-      Mid-high school was wild... deciding careers was exhilarating yet confusing, emotional for sure, and honestly stressful.
-      All that while juggling matric prelims and finals with some personal life chaos as well. Would you believe me if I told you
-      that IT was my third choice after Law and Psychology? Well, my third choice turned into my first, and I remember my first
-      ever line of code and how executing it was oddly heartwarming. Little did I know there would be nasty bugs along the way (if you know, you know).
-      Anyway, that feeling of creating something out of nothing, two words forming a sentence that looked so basics, that’s where it started.
-      Projects, new languages, unexpected errors, hours of debugging, and then realizing as you lay on your bed that you ended a line with a colon instead
-      of a semicolon… those moments became my daily companions.
-    </p>
-    <break>
-      <p>Let us dive into the chaos and small victories. Some things that would seem a little foreign to the outside world.</p>
-    </break>
-    <a href="choosing-it.html" class="cta">Next Stop: Choosing Careers</a>
-  </section>
+    <canvas id="tech-bg"></canvas>
 
-  <section class="blog-flow">
-    <h2>The Phases</h2>
+    <section class="hero">
+      <h1 class="typing">Life before HTML & Java: My path to IT</h1>
+      <p>
+        Mid-high school was wild...deciding careers was exhilarating yet confusing, emotional for sure, and honestly stressful.
+        All that while juggling matric premils and finals with some personal life chaos as well, can you imagine? Would you believe
+        me if I told you that IT was my third choice after Law and Psychology? Well, my third choice turned into my first and I remember
+        my first ever line of code and executing it was oddly heart warming. Little did I know that there would be nasty bugs along the way
+        (if you know,you know). Anyway, that feeling of creating something out of nothing, those two words that formed a sentence that looked
+        so basic, that's where it all started. Projects, new languages and unexpected errors that led to bugs and hours of debugging, where you
+        later realised just as you head to bed that you ended a line with a colon instead of a semi-colon...those moments became my daily companions.
 
-    <div class="phase"><span>01</span><a href="choosing-it.html">Choosing Careers</a></div>
-    <div class="phase"><span>02</span><a href="#">Hello World!</a></div>
-    <div class="phase"><span>03</span><a href="#">Tech Chaos Begins</a></div>
-    <div class="phase"><span>04</span><a href="#">Making Things Pretty with CSS</a></div>
-    <div class="phase"><span>05</span><a href="#">Java Confused Me</a></div>
-    <div class="phase"><span>06</span><a href="#">Debugging Code</a></div>
-    <div class="phase"><span>07</span><a href="#">Learning Cybersecurity</a></div>
-    <div class="phase"><span>08</span><a href="#">Next Steps in Coding</a></div>
-  </section>
+      </p>
 
-  <div class="code-bg">
-    <span>&lt;html&gt;</span>
-    <span>function()</span>
-    <span>{ }</span>
-    <span>console.log()</span>
-    <span>&lt;/&gt;</span>
-  </div>
+      <break>
+        <p> Let us dive into the chaos and small victories. Some things that would seem foreign to the outside world.</p>
+      </break>
+      
+      <a href="choosing-it.html" class="cta">Next Stop: Choosing Careers</a>
+    </section>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Zama. Tech Tales Continue...</p>
-  </footer>
+    <section class="blog-flow">
+      <h2>The Phases</h2>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
+      <div class="phase">
+        <span>01</span>
+        <a href="choosing-it.html">Choosing Careers</a>
+      </div>
+
+      <div class="phase">
+        <span>02</span>
+        <a href= "#">Hello World!</a>
+      </div>
+
+      <div class="phase">
+        <span>03</span>
+        <a href="#">Tech Chaos Begins</a>
+      </div>
+
+      <div class="phase">
+        <span>04</span>
+        <a href="#">Making Things Pretty with CSS</a>
+      </div>
+
+      <div class="phase">
+        <span>05</span>
+        <a href="#">Java Confused Me</a>
+      </div>
+
+      <div class="phase">
+        <span>06</span>
+        <a href="#">Debugging Code</a>
+      </div>
+
+      <div class="phase">
+        <span>07</span>
+        <a href="#">Learning Cybersecurity</a>
+      </div>
+
+      <div class="phase">
+        <span>08</span>
+        <a href="#">Next Steps in Coding</a>
+      </div>
+    </section>
+
+    <div class="code-bg">
+      <span>&lt;html&gt;</span>
+      <span>function()</span>
+      <span>{ }</span>
+      <span>console.log()</span>
+      <span>&lt;/&gt;</span>
+    </div>
+
+    <footer>
+      <p>&copy; <span id="year"></span> ZamaM. Tech Tales Continue...</p>
+    </footer>
+
+    <script src="tech-bg.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+  </body>
 </html>
