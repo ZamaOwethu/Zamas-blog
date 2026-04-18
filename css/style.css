@@ -18,9 +18,8 @@ body.no-scroll {
 }
 
 body.scroll-page {
-  height: auto;
+  min-height: 100vh;
   overflow-y: auto;
-  display: block;
 }
 
 .logo {
@@ -50,7 +49,7 @@ canvas {
   padding: 2rem;
   position: relative;
   z-index: 1;
-  max-width: 800px;
+  max-width: 750px;
   margin: auto;
 }
 
@@ -61,10 +60,12 @@ canvas {
 }
 
 .hero p {
-  margin-top: 1rem;
+  margin-bottom: 1.2rem;
   color: #d6d6d6;
-  line-height: 1.6;
+  line-height: 1.7;
   font-size: 0.95rem;
+  margin: 1rem 0;
+  opacity: 0.92;
 }
 
 .cta {
@@ -92,6 +93,8 @@ footer {
   font-size: 0.85rem;
   position: relative;
   z-index: 1;
+  margin-top: 3rem;
+  padding-bottom: 2rem;
 }
 
 @keyframes neonPulsePink {
