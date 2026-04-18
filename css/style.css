@@ -7,8 +7,8 @@ body {
 }
 
 a, h1, h2, span {
-  transition: all 0.3s ease;
-  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+  transition: all 0.25s ease;
+  text-shadow: none;
 }
 
 .hero {
@@ -21,9 +21,9 @@ a, h1, h2, span {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  color: #0ff;
-  animation: glow 2s infinite alternate;
+  font-size: 2.3rem;
+  color: #f2f2f2;
+  animation: none;
 }
 
 .hero p {
@@ -35,20 +35,15 @@ a, h1, h2, span {
 }
 
 .cta {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.8rem 2rem;
-  background: #0ff;
-  color: #0b0f1a;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  background: #2a2f36;
+  color: #fff;
+  box-shadow: none;
+  border: 1px solid #3a404a;
 }
 
 .cta:hover {
-  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
-  transform: translateY(-3px);
+  background: #3a404a;
+  transform: translateY(-2px);
 }
 
 .blog-flow {
