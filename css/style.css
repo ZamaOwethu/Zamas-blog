@@ -1,14 +1,19 @@
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #111418; 
+  font-family: 'Orbitron', sans-serif;
+  background-color: #111418;
   color: #e6e6e6;
   overflow-x: hidden;
 }
 
-a, h1, h2, span {
-  transition: all 0.25s ease;
-  text-shadow: none;
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.25;
 }
 
 .hero {
@@ -22,41 +27,47 @@ a, h1, h2, span {
 
 .hero h1 {
   font-size: 2.3rem;
-  color: #f2f2f2;
-  animation: none;
+  color: #eaffff;
+  animation: neonPulse 3s infinite;
 }
 
 .hero p {
-  margin-top: 1.5rem;
-  color: #aad4ff;
-  line-height: 1.6;
-  font-size: 1.05rem;
-  opacity: 0.9;
+  margin-top: 1.2rem;
+  color: #cbd5e1;
+  line-height: 1.7;
 }
 
 .cta {
-  background: #2a2f36;
-  color: #fff;
-  box-shadow: none;
-  border: 1px solid #3a404a;
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background: #1f2933;
+  color: #e6f7ff;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid rgba(0,255,255,0.2);
+  transition: 0.3s;
 }
 
 .cta:hover {
-  background: #3a404a;
+  background: #2a3642;
   transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(0,255,255,0.2);
 }
 
 .blog-flow {
   max-width: 900px;
   margin: 3rem auto;
   padding: 0 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .blog-flow h2 {
   text-align: center;
   margin-bottom: 2rem;
-  color: #0ff;
-  font-size: 2rem;
+  color: #00ffff;
 }
 
 .phase {
@@ -64,96 +75,70 @@ a, h1, h2, span {
   align-items: center;
   margin-bottom: 1rem;
   padding: 0.5rem 0;
-  border-left: 1rem;
+  border-left: 2px solid rgba(0,255,255,0.3);
   padding-left: 1rem;
   transition: 0.3s;
 }
 
+.phase:hover {
+  transform: translateX(8px);
+}
+
 .phase span {
-  display: inline-block;
   width: 2rem;
   text-align: center;
-  color: #0ff;
+  color: #00ffff;
   font-weight: bold;
   margin-right: 1rem;
-  animation: pulse 2s infinite;
+  opacity: 0.8;
 }
 
 .phase a {
-  color: #aad4ff;
+  color: #cfefff;
   text-decoration: none;
-}
-
-.phase.hover {
-  transform: translateX(10px);
+  transition: 0.3s;
 }
 
 .phase a:hover {
-  color: #fff;
-  text-shadow: 0 0 5px #0ff;
+  color: #00ffff;
+  text-shadow: 0 0 8px rgba(0,255,255,0.4);
 }
 
 .code-bg {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  font-family: 'Fira Code', monospace;
-  font-size: 0.9rem;
-  color: #0ff;
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: rgba(0,255,255,0.4);
   display: flex;
   gap: 1rem;
-  animation: float 5s infinite alternate;
-}
-
-.hero,
-.blog-flow,
-footer {
-  position: relative;
   z-index: 1;
 }
 
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  opacity: 0.25;
-  
 footer {
   text-align: center;
-  padding: 1.5rem 0;
-  background-color: #151a20;
-  border-top: 1px solid #2a2f36;
+  padding: 3rem 2rem;
+  margin: 4rem auto;
+  max-width: 700px;
+  background: #151a20;
+  border: 1px solid rgba(0,255,255,0.15);
+  border-radius: 12px;
   color: #c7c7c7;
+  box-shadow: 0 0 12px rgba(0,255,255,0.08);
   position: relative;
   z-index: 1;
 }
 
-@keyframes glow {
-  0% { text-shadow: 0 0 5px #0ff; }
-  50% { text-shadow: 0 0 15px #0ff, 0 0 30px #0ff; }
-  100% { text-shadow: 0 0 5px #0ff; }
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.2); opacity: 0.7; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
-}
-
-#tech-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  background: #0b0f1a;
+@keyframes neonPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 4px rgba(0,255,255,0.25),
+      0 0 10px rgba(0,255,255,0.15);
+  }
+  50% {
+    text-shadow:
+      0 0 8px rgba(0,255,255,0.4),
+      0 0 18px rgba(0,255,255,0.25);
+  }
 }
