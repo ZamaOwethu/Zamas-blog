@@ -23,16 +23,6 @@ body.scroll-page {
   display: block;
 }
 
-.top-bar::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 5%;
-  width: 90%;
-  height: 1px;
-  background: rgba(255,105,180,0.2);
-}
-
 .logo {
   font-size: 0.9rem;
   color: #ffd6ec;
