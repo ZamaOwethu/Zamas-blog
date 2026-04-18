@@ -3,12 +3,24 @@ body {
   font-family: 'Orbitron', sans-serif;
   background-color: #111418;
   color: #e6e6e6;
-
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow-y: auto; 
+}
+
+body.no-scroll {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body.scroll-page {
+  height: auto;
+  overflow-y: auto;
+  display: block;
 }
 
 .top-bar {
