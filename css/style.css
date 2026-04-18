@@ -16,6 +16,8 @@ a, h1, h2, span {
   padding: 4rem 2rem;
   position: relative;
   z-index: 1;
+  max-width: 900px;
+  margin: auto;
 }
 
 .hero h1 {
@@ -28,6 +30,8 @@ a, h1, h2, span {
   margin-top: 1.5rem;
   color: #aad4ff;
   line-height: 1.6;
+  font-size: 1.05rem;
+  opacity: 0.9;
 }
 
 .cta {
@@ -64,6 +68,10 @@ a, h1, h2, span {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  border-left: 1rem;
+  padding-left: 1rem;
+  transition: 0.3s;
 }
 
 .phase span {
@@ -79,6 +87,10 @@ a, h1, h2, span {
 .phase a {
   color: #aad4ff;
   text-decoration: none;
+}
+
+.phase.hover {
+  transform: translateX(10px);
 }
 
 .phase a:hover {
