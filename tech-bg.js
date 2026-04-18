@@ -4,33 +4,35 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-let symbols = [];
+const symbols = ["</>", "{}", "()", "01", "HTML", "CSS", "JS", "API"];
 
-const chars = "<>{}()[]/\\|console.log();HTMLCSSJAVA";
+let particles = [];
 
-for (let i = 0; i < 80; i++) {
-  symbols.push({
+for (let i = 0; i < 35; i++) {
+  particles.push({
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
-    speed: 0.5 + Math.random() * 1.5,
-    char: chars[Math.floor(Math.random() * chars.length)],
+    speed: 0.2 + Math.random() * 0.4,
+    size: 14 + Math.random() * 10,
+    text: symbols[Math.floor(Math.random() * symbols.length)],
+    opacity: 0.05 + Math.random() * 0.1
   });
 }
 
 function draw() {
-  ctx.fillStyle = "rgba(11,15,26,0.15)";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  ctx.fillStyle = "#0ff";
-  ctx.font = "16px monospace";
+  particles.forEach(p => {
+    ctx.font = `${p.size}px monospace`;
+    ctx.fillStyle = `rgba(200, 200, 200, ${p.opacity})`;
 
-  symbols.forEach((s) => {
-    ctx.fillText(s.char, s.x, s.y);
-    s.y += s.speed;
+    ctx.fillText(p.text, p.x, p.y);
 
-    if (s.y > canvas.height) {
-      s.y = 0;
-      s.x = Math.random() * canvas.width;
+    p.y -= p.speed;
+
+    if (p.y < -20) {
+      p.y = canvas.height + 20;
+      p.x = Math.random() * canvas.width;
     }
   });
 
