@@ -13,9 +13,9 @@ for (let i = 0; i < 35; i++) {
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
     speed: 0.2 + Math.random() * 0.4,
-    size: 14 + Math.random() * 10,
+    size: 16 + Math.random() * 12,
     text: symbols[Math.floor(Math.random() * symbols.length)],
-    opacity: 0.05 + Math.random() * 0.1
+    opacity: 0.08 + Math.random() * 0.18
   });
 }
 
@@ -24,9 +24,14 @@ function draw() {
 
   particles.forEach(p => {
     ctx.font = `${p.size}px monospace`;
-    ctx.fillStyle = `rgba(200, 200, 200, ${p.opacity})`;
+
+    ctx.fillStyle = `rgba(0, 255, 255, ${p.opacity})`;
+    ctx.shadowColor = "rgba(0,255,255,0.4)";
+    ctx.shadowBlur = 6;
 
     ctx.fillText(p.text, p.x, p.y);
+
+    ctx.shadowBlur = 0;
 
     p.y -= p.speed;
 
