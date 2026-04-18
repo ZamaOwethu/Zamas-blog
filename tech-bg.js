@@ -25,8 +25,8 @@ function draw() {
   particles.forEach(p => {
     ctx.font = `${p.size}px monospace`;
 
-    ctx.fillStyle = `rgba(0, 255, 255, ${p.opacity})`;
-    ctx.shadowColor = "rgba(0,255,255,0.4)";
+    ctx.fillStyle = `rgba(255, 105, 180, ${p.opacity})`;
+    ctx.shadowColor = "rgba(255,105,180,0.4)";
     ctx.shadowBlur = 6;
 
     ctx.fillText(p.text, p.x, p.y);
