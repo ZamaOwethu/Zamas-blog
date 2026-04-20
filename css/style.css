@@ -1,3 +1,8 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   background: #0f1117;
@@ -55,13 +60,13 @@ body {
 }
 
 .hero {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 90px 20px 20px; 
+  padding: 90px 20px 20px;
 }
 
 #typed {
@@ -87,12 +92,17 @@ body {
 }
 
 .story {
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  max-width: 750px;
+
   opacity: 0;
   transition: opacity 1.5s ease;
-  max-width: 750px;
-  margin: 20px auto 0;  
-  line-height: 1.6;
   text-align: center;
+  line-height: 1.6;
 }
 
 .story.show {
