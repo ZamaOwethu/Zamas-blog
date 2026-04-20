@@ -7,7 +7,11 @@ function typeWriter() {
     i++;
     setTimeout(typeWriter, 80);
   } else {
-    document.getElementById("subtitle").classList.remove("hidden");
+    document.getElementById("subtitle").classList.add("show");
+
+    setTimeout(() => {
+      document.querySelector(".story").classList.add("show");
+    }, 600);
   }
 }
 
