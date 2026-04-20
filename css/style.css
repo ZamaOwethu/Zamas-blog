@@ -69,6 +69,7 @@ html, body {
   text-align: center;
   padding: 0;
   margin: 0;
+  z-index: 1;
 }
 
 #typed {
@@ -97,14 +98,13 @@ html, body {
 
   width: 70%;
   max-width: 750px;
-
   opacity: 0;
   transition: opacity 1.5s ease;
 
   text-align: center;
   line-height: 1.6;
-
   margin: 0;
+  z-index: 2;
 }
 
 .story.show {
