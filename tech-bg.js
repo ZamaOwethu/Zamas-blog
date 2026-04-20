@@ -16,3 +16,15 @@ function typeWriter() {
 }
 
 window.onload = typeWriter;
+
+document.addEventListener("DOMContentLoaded", () => {
+  const bug = document.querySelector(".bug-text");
+
+  bug.addEventListener("mouseenter", () => {
+    bug.classList.add("glitch");
+  });
+
+  bug.addEventListener("mouseleave", () => {
+    bug.classList.remove("glitch");
+  });
+});
