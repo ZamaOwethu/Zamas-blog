@@ -1,53 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life Before HTML & Java: My Journey into Tech</title>
-    <title><h2>By Zama M.</h2></title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body class="no-scroll">
+<head>
+  <meta charset="UTF-8">
+  <title>Life Before HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <canvas id="tech-bg"></canvas>
+<body>
 
-    <div class="top-bar">
-      <h2>Zama M. Exploring Code & Chaos.</h2>
-    </div>
+  <img src="logo.png" class="logo" id="logo">
 
-    <section class="hero">
-      <h1 class="typing">Life before HTML & Java: My path to IT</h1>
-      <p>
-        Mid-high school was wild...deciding careers was exhilarating yet confusing, emotional for sure, and honestly stressful.
-        All that while juggling matric premils and finals with some personal life chaos as well, can you imagine? Would you believe
-        me if I told you that IT was my third choice after Law and Psychology?</p>
-      <p>
-        
-        Well, my third choice turned into my first and I remember my first ever line of code and executing it was oddly heart warming. 
-      Little did I know that there would be nasty bugs along the way (if you know,you know). Anyway, that feeling of creating something out
-      of nothing, those two words that formed a sentence that looked so basic, that's where it all started.
-      </p>
+  <section class="hero">
+    <h1 id="typed"></h1>
+    <h2 id="subtitle" class="hidden">My path to IT</h2>
+  </section>
 
-      <p>
-      Projects, new languages and unexpected errors that led to bugs and hours of debugging, where you later realised just as you head to bed
-      that you ended a line with a colon instead of a semi-colon...those moments became my daily companions.
+  <section class="story">
+
+    <p> Mid-high school was wild. Deciding careers was exhilarating yet confusing, emotional for sure, and honestly stressful.</p>
+
+    <p>Would you believe IT was my third choice, after Law and Psychology?</p>
+
+    <p>Yeah. Third.</p>
+
+    <p>But somehow that third choice turned into my first. </p>
+
+    <p>I still remember my first line of code. Executing it was oddly heart warming. That feeling of creating something out
+      of nothing, those two words that formed a sentence that looked so basic, that's where it all started.</p>
+
+    <p>And yes… <span class="bug-text">bugs</span> became part of the journey.</p>
+
+    <p>The kind that show up right before sleep and you realise that you ended a line with a colon instead of a semi-colon.
+      Those moments became my daily companions.
      </p>
 
-      <br>
-        <p> Let us dive into the chaos and small victories. Some things that would seem foreign to the outside world.</p>
+  </section>
 
-      
-      <a href="choosing-it.html" class="cta">Next Stop: Choosing Careers</a>
-    </section>
-
-    <footer>
-      <p>&copy; <span id="year"></span> Zama M. Tech Tales Continue...</p>
+  <footer>
+      <p>&copy; <span id="year"></span> Zama M. Tech Tales..</p>
     </footer>
 
     <script src="tech-bg.js"></script>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-
-  </body>
+  
+</body>
 </html>
