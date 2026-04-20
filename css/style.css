@@ -64,19 +64,18 @@ html, body {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
+  padding-top: 180px; 
 }
 
 #typed {
   font-size: 64px;
   color: #7c5cff;
   margin: 0;
-  font-weight: 700;
+  position: relative;
+  top: -20px; 
 }
 
 #subtitle {
@@ -92,18 +91,16 @@ html, body {
 
 .story {
   position: fixed;
-  bottom: 12%;
+  bottom: 8%; 
   left: 50%;
   transform: translateX(-50%);
-
   width: 70%;
   max-width: 750px;
+
   opacity: 0;
   transition: opacity 1.5s ease;
-
   text-align: center;
   line-height: 1.6;
-  margin: 0;
   z-index: 2;
 }
 
@@ -116,9 +113,13 @@ html, body {
 }
 
 footer {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
   text-align: center;
-  padding: 20px;
   opacity: 0.6;
   font-size: 14px;
+  z-index: 3;
 }
-
