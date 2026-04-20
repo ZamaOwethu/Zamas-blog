@@ -5,13 +5,26 @@ body {
   font-family: Arial, sans-serif;
   overflow-x: hidden;
 }
+.brand {
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 999;
+}
 
 .logo {
-  position: fixed;
-  top: 20px;
-  left: 25px;
-  width: 110px;
-  opacity: 0.85;
+  width: 45px;   
+  height: auto;
+}
+
+.brand-text {
+  font-size: 13px;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  color: white;
 }
 
 .hero {
